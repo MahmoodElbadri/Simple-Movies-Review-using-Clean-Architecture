@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Movie>
+@{
+    ViewData["Title"] = "MoviesAsPdf";
+    Layout = null;
+}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU4jBcu6FSBYp12W4J/SdQRA2nOuLtDE3r9Yk" crossorigin="anonymous" />
+
+<div class="container mt-5">
+    <h1 class="mb-4">Movies</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Description</th>
+                <th>Release Date</th>
+                <th>Average Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <td>@movie.Title</td>
+                    <td>@movie.ReleaseDate.Year</td>
+                    <td>@movie.Description</td>
+                    <td>@movie.ReleaseDate.ToShortDateString()</td>
+                    <td>@movie.AverageRating</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,83 @@
+﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+        <p class="navbar-brand">Welcome to Badri's Movies</p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    @if(ViewBag.CurrentUrl == "~/Home/Index")
+                    {
+                        <a class="nav-link text-dark nav-active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    }
+                </li>
+                <li class="nav-item">
+                    @if (ViewBag.CurrentUrl == "~/Movies/Index")
+                    {
+                        <a class="nav-link text-dark nav-active" asp-area="" asp-controller="Movies" asp-action="Index">Movies</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Movies" asp-action="Index">Movies</a>
+                    }
+                </li>
+                <li class="nav-item">
+                    @if (ViewBag.CurrentUrl == "~/Genre/Index")
+                    {
+                        <a class="nav-link text-dark nav-active" asp-area="" asp-controller="Genre" asp-action="Index">Genres</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Genre" asp-action="Index">Genres</a>
+                    }
+                </li>
+                <li class="nav-item">
+                    @if (ViewBag.CurrentUrl == "~/Review/Index")
+                    {
+                        <a class="nav-link text-dark nav-active" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a>
+                    }
+                </li>
+                <li class="nav-item">
+                    @if (ViewBag.CurrentUrl == "~/Home/Privacy")
+                    {
+                        <a class="nav-link text-dark nav-active" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    }
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <span class="nav-link">@User.Identity?.Name</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Logout" asp-controller="Account">Logout</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Login" asp-controller="Account">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="Register" asp-controller="Account">Register</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Genre>
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.CurrentUrl = "~/Genre/Index";
+}
+
+<h1>Index</h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Genre Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var genre in Model)
+        {
+            <tr>
+                <th scope="row">@genre.GenreId</th>
+                <td>@genre.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Add" asp-controller="Genre" class="btn btn-success mt-4 mb-4">Add Genre</a>

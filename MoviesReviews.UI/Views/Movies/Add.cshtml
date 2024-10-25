@@ -1,0 +1,52 @@
+﻿@model Movie
+@{
+    ViewData["Title"] = "Add";
+    ViewBag.CurrentUrl = "~/Movies/Add";
+}
+
+<h1>Add Movie</h1>
+
+<form method="post" asp-controller="Movies" asp-action="Add" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="GenreId" class="control-label"></label>
+        <select asp-for="GenreId" class="form-control">
+            <option value="">-- Select Genre --</option>
+            @foreach (var genre in (List<Genre>)ViewBag.genres)
+            {
+                <option value="@genre.GenreId">@genre.Name</option>
+            }
+        </select>
+        <span asp-validation-for="GenreId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ReleaseDate" class="control-label"></label>
+        <input asp-for="ReleaseDate" type="datetime-local" class="form-control" />
+        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AverageRating" class="control-label"></label>
+        <input asp-for="AverageRating" type="number" class="form-control" />
+        <span asp-validation-for="AverageRating" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImagePath" class="control-label">Movie Poster</label>
+        <input type="file" asp-for="ImagePath" class="form-control" />
+        <span asp-validation-for="ImagePath" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success mt-4 mb-4">Save</button>
+    <div asp-validation-summary="All" class="text-danger"></div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
