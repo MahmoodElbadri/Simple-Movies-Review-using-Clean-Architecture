@@ -109,8 +109,3 @@ The project follows **Clean Architecture** principles to ensure separation of co
 - **Web**: Contains the ASP.NET Core MVC layer, including controllers, views, and models.
 
 ---
-
-
----
-
-Once you upload the images to the `images` folder in your GitHub repository, simply update the image URLs in the markdown with the actual image URLs to showcase the screenshots in the README.
