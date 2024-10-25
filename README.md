@@ -70,7 +70,7 @@ Welcome to the **Movies Review Website**! This full-stack web application allows
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/movies-review-website.git
+   git clone [https://github.com/MahmoodElbadri/Simple-Movies-Review-using-Clean-Architecture.git]
    ```
 
 2. **Navigate to the project folder**:
