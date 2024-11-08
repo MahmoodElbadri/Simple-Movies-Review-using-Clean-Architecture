@@ -22,7 +22,7 @@ Welcome to the **Movies Review Website**! This full-stack web application allows
 
 1. **Movie Listing**:  
    - View a list of all movies in the database, including details like title, description, genre, release date, and average rating.  
-   ![Movie Listing](https://private-user-images.githubusercontent.com/61979779/380189669-50842b6c-b4fc-4512-8b1f-8170948fe752.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk4NjQ0MjEsIm5iZiI6MTcyOTg2NDEyMSwicGF0aCI6Ii82MTk3OTc3OS8zODAxODk2NjktNTA4NDJiNmMtYjRmYy00NTEyLThiMWYtODE3MDk0OGZlNzUyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDI1VDEzNDg0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIwNmQyZjcxMWYzZTc4ZGM3YzdhZGU1ZmE1ZWJjYjdjMjM3YmFiYWQ5MWUyN2MzNGFiNTQ3MDNkYTM4ZGIzMjQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.2mENTQgVT-EaLg1wce0VL779DG6Id-MdIIj2rUVRo24)
+   ![Movie Listing](https://drive.google.com/file/d/1818zCT2yHK9B_atjZ9m7R_JpvQnXNHwj/view?usp=sharing)
 
 2. **Search Functionality**:  
    - Search movies by title or genre using keyword-based search boxes.  
